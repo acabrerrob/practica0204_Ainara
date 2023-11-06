@@ -12,9 +12,7 @@ age = int (input('Introduzca su edad: '))
 address = input('Introduzca su dirección: ')
 phoneNum = int (input('Introduzca su número de teléfono: '))
 
-personalDict['nombre'] = name
-personalDict['edad'] = age
-personalDict['dirección'] = address
-personalDict['teléfono'] = phoneNum
+personalDict.update({'nombre' = name, 'edad' = age, 'dirección' = address, 'teléfono' = phoneNum})
+
 
 print(personalDict)
