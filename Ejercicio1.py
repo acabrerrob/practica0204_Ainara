@@ -1,10 +1,10 @@
-# Escribir un programa que guarde en una variable el diccionario 
-# {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, pregunte al usuario por
-# una divisa y muestre su símbolo o un mensaje de aviso si la 
-# divisa no está en el diccionario.
-currencyDict = {'Euro' : '€', 'Dollar' : '$', 'Yen' : '¥'} 
+currencyDict = {'euro' : '€', 'dollar' : '$', 'yen' : '¥'}
 
-badge = input ('Introduzca una divisa: ').title()
+
+badge = input ('Introduzca una divisa: ').lower()
+
 
 if badge in currencyDict :
-    print(currencyDict.items('Euro'))
+    print(currencyDict.get(badge))
+else :
+    print('Su divisa no se encuentra en el diccionario.')
