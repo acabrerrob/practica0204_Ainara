@@ -1,18 +1,10 @@
-# Escribir un programa que pregunte al usuario su nombre, edad,
-# dirección y teléfono y lo guarde en un diccionario. Después 
-# debe mostrar por pantalla el mensaje “<nombre> tiene <edad> 
-# años, vive en <dirección> y su número de teléfono es <teléfono>”.
-# dictionary[clave] = valor : Añade al diccionario dictionary 
-# el par formado por la clave clave y el valor valor.
-
+dataList = ['nombre', 'edad', 'dirección', 'número']
 personalDict = {}
 
-name = input('Introduzca su nombre: ')
-age = int (input('Introduzca su edad: '))
-address = input('Introduzca su dirección: ')
-phoneNum = int (input('Introduzca su número de teléfono: '))
 
-personalDict.update({'nombre' = name, 'edad' = age, 'dirección' = address, 'teléfono' = phoneNum})
+for dataPosition in dataList :
+    dataValue = input ('Introduzca su '+ dataPosition + ': ' )
+    personalDict[dataPosition] = dataValue  
 
 
-print(personalDict)
+print (personalDict['nombre'], 'tiene ', personalDict['edad'], 'años, ', 'vive en ', personalDict['dirección'], 'y su número de teléfono es ', personalDict['número'])
